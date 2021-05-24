@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>Madlibs</h1>
+    <form action="/story" method="post">
+      <!-- <label for="place">Place:</label> 
+      <input  type="text" id="place"> <br>
+      <label for="noun">Noun:</label>
+      <input type="text" id="noun">
+      <label for="verb">Verb:</label>
+      <input type="text" id="verb">
+      <label for="adjective">Adjective:</label>
+      <input type="text" id="adjective">
+      <label for="plural-noun">Plural noun:</label>
+      <input type="text" id="plural-noun">
+      <button type="submit">Submit</button> -->
+      {% for part_of_speech in parts_of_speech%}
+        <strong><label for={{part_of_speech}}>{{part_of_speech.capitalize()}}:</label></strong>
+        <input type="text" id={{part_of_speech}} name={{part_of_speech}}><br><br>
+      {% endfor %}
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+</body>
+</html>
