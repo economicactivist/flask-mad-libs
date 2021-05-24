@@ -11,7 +11,7 @@ parts_of_speech = ["place", "noun", "verb", "adjective", "plural_noun"]
 
 
 @app.route('/')
-@app.route('/home', methods=['GET', 'POST'])
+@app.route('/home')
 def home():
     return render_template('index.html', parts_of_speech=parts_of_speech)
 
